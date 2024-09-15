@@ -1,29 +1,22 @@
-# How to Build
+# How to create a copy of the template
 
-### Windows
+1. Press the green button in the top right corner and select "Create a new repository"
 
-On Windows you need to use Visual Studio, open galba.sln and you should be ready to go.
+![image](https://github.com/user-attachments/assets/72c5d406-c171-4153-953d-9d4454d2ba6c)
 
-### MacOS
 
-On Mac you need to do the following:
+2. Fill in the name of your repository and optionally a description. Select between a public and a private repository. (For most smaller assignments a private repository will suit you better). Then press "Create repository" in the bottom right corner
 
-- Install HomeBrew (https://brew.sh/)
-- Install Raylib with homebrew. Run the command `brew install raylib` in the terminal.
-- Install Visual Studio Code
-- Open the Galba folder with Visual Studio Code
-- Run the Task "Build Project (MacOS - Clang)" to build.
-  - Click on the search bar at the top
-  - Click on "Run Task"
-  - Click on "Build Project (MacOS - Clang)"
+![image](https://github.com/user-attachments/assets/417350f1-21a4-402d-9535-5194e2897be8)
 
-**Disclaimer**: I don't have a Mac and we don't support it. If you have any problems help will be limited.
+3. When the new repository is created press the green button in the top right corner and select "Open with Visual Studio"
 
-# Project Layout
+![image](https://github.com/user-attachments/assets/20ae720f-9f23-4a33-bed8-579132ca0351)
 
-**All source files go in the /Source folder**. Make sure that you put them there when you create new files with Visual Studio.
+4. Now select a path on your computer where the repository should be stored locally either by typing it in or pressing the 3 dots and browsing. Then press "Clone" in the bottom right corner to finish up.
 
-Every build file, intermediate file and so on goes in the /Build folder, you don't need to do anything for that, it will happen automatically.
+![image](https://github.com/user-attachments/assets/38316674-1c33-4a30-ab6c-acaefef3d914)
 
-If you're looking for the executable, for example if you want to share the game with someone, build in **Release** mode and you van find it in **/Build/Release/galba.exe**
+5. Now you can open the file called "main.cpp" and start programming
 
+![image](https://github.com/user-attachments/assets/8ffb5815-178c-44eb-b6f3-1f744bb5ff1c)
