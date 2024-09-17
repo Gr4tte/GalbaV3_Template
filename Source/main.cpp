@@ -1,7 +1,7 @@
 #include "galba.h"
 
-const unsigned short WINDOW_WIDTH = 1080;
-const unsigned short WINDOW_HEIGHT = 720;
+constexpr unsigned short WINDOW_WIDTH = 1080;
+constexpr unsigned short WINDOW_HEIGHT = 720;
 
 void update()
 {
