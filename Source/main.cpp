@@ -13,7 +13,7 @@ constexpr Color BACKGROUND_COLOR = BLACK;
 struct Circle
 {
 	Vector2 Position;
-	float Radius = 30;
+	float Radius;
 	Color Color;
 
 	Circle(const Vector2 &position, const float &radius, const RAYLIB_H::Color &color = white)
@@ -30,12 +30,12 @@ struct Circle
 	}
 };
 
-static void update()
+static void Update()
 {
 	Vector2 mousePosition = GetMousePosition();
 }
 
-static void render()
+static void Render()
 {
 	
 }
@@ -46,10 +46,10 @@ int main()
 
 	while (is_window_open())
 	{
-		update();
+		Update();
 
 		ClearBackground(BACKGROUND_COLOR);
-		render();
+		Render();
 		EndDrawing();
 	}
 
