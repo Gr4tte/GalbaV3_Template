@@ -1,29 +1,36 @@
+// Name
+
+// Assignment text
+
 #include "galba.h"
+#include <iostream>
 
 constexpr unsigned short WINDOW_WIDTH = 1080;
 constexpr unsigned short WINDOW_HEIGHT = 720;
+const std::string WINDOW_TITLE = "Main_Window";
+constexpr Color BACKGROUND_COLOR = BLACK;
 
-void update()
+static void Update()
 {
 
 }
 
-void render()
+static void Render()
 {
-	
+
 }
 
 int main()
 {
-	initialize(WINDOW_WIDTH, WINDOW_HEIGHT, "Main_Window");
+	initialize(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
 
 	while (is_window_open())
 	{
-		update();
+		Update();
 
-		clear_window();
-		render();
-		display();
+		ClearBackground(BACKGROUND_COLOR);
+		Render();
+		EndDrawing();
 	}
 
 	return 0;
