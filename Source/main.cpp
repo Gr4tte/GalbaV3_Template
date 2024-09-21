@@ -19,23 +19,23 @@ struct Circle
 	Circle(const Vector2 &position, const float &radius, const RAYLIB_H::Color &color = white)
 		: Position(position), Radius(radius), Color(color) { }
 
-	void Render()
+	void Render() const
 	{
 		DrawCircle(static_cast<int>(Position.x), static_cast<int>(Position.y), Radius, Color);
 	}
 
-	bool IsPointInside(Vector2 point)
+	bool IsPointInside(Vector2 point) const
 	{
-		CheckCollisionPointCircle(point, Position, Radius);
+		return CheckCollisionPointCircle(point, Position, Radius);
 	}
 };
 
-void update()
+static void update()
 {
 	Vector2 mousePosition = GetMousePosition();
 }
 
-void render()
+static void render()
 {
 	
 }
