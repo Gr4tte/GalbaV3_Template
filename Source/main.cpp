@@ -1,11 +1,38 @@
+// Name
+
+// Assignment text
+
 #include "galba.h"
+#include <iostream>
 
 constexpr unsigned short WINDOW_WIDTH = 1080;
 constexpr unsigned short WINDOW_HEIGHT = 720;
+const std::string WINDOW_TITLE = "Main_Window";
+constexpr Color BACKGROUND_COLOR = BLACK;
+
+struct Circle
+{
+	Vector2 Position;
+	float Radius = 30;
+	Color Color;
+
+	Circle(const Vector2 &position, const float &radius, const RAYLIB_H::Color &color = white)
+		: Position(position), Radius(radius), Color(color) { }
+
+	void Render()
+	{
+		DrawCircle(static_cast<int>(Position.x), static_cast<int>(Position.y), Radius, Color);
+	}
+
+	bool IsPointInside(Vector2 point)
+	{
+		CheckCollisionPointCircle(point, Position, Radius);
+	}
+};
 
 void update()
 {
-
+	Vector2 mousePosition = GetMousePosition();
 }
 
 void render()
@@ -15,15 +42,15 @@ void render()
 
 int main()
 {
-	initialize(WINDOW_WIDTH, WINDOW_HEIGHT, "Main_Window");
+	initialize(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
 
 	while (is_window_open())
 	{
 		update();
 
-		clear_window();
+		ClearBackground(BACKGROUND_COLOR);
 		render();
-		display();
+		EndDrawing();
 	}
 
 	return 0;
